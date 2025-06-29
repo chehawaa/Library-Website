@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility & Inclusivity - Inclusive Library</title>
+<style>
+  :root {
+    --primary-color: #a8e6cf;
+    --secondary-color: #e0f7f1;
+    --accent-color: #d0f0e0;
+    --header-bg: #88d8b0;
+    --text-color: #2e3d35;
+    --highlight: #56c596;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+
+  header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .language-select {
+    background-color: white;
+    color: var(--text-color);
+    padding: 0.4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1em;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+    background-color: var(--highlight);
+    padding: 0.4em 1em;
+    border-radius: 5px;
+  }
+
+  nav a:hover {
+    opacity: 0.8;
+  }
+
+  .section {
+    padding: 2em;
+    max-width: 900px;
+    margin: 2em auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: var(--highlight);
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    list-style: none;
+    padding: 0;
+  }
+
+  .features li {
+    background-color: var(--accent-color);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+  }
+
+  .features li::before {
+    content: "✔️";
+    color: var(--highlight);
+    font-size: 1.2em;
+  }
+
+  .commitment {
+    margin-top: 2em;
+    background: var(--accent-color);
+    padding: 1.5em;
+    border-left: 5px solid var(--highlight);
+    border-radius: 8px;
+    font-size: 1em;
+  }
+
+  footer {
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+  }
+
+  footer a {
+    color: #e0ffef;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="header-title">iSecretary Hub</h1>
+  <select class="language-select" id="languageSelect">
+    <option value="en">English</option>
+    <option value="ms">Bahasa Melayu</option>
+  </select>
+</header>
+
+<nav>
+  <a href="index.html" id="nav-home">Home</a>
+  <a href="search.html" id="nav-search">Search</a>
+  <a href="learning-center.html" id="nav-learning">Learning Center</a>
+  <a href="support.html" id="nav-support">Support</a>
+  <a href="accessibility.html" id="nav-access">Accessibility</a>
+  <a href="about-us.html" id="nav-about">About Us</a>
+  <a href="contact-us.html" id="nav-contact">Contact Us</a>
+</nav>
+
+<div class="section">
+  <h2 id="section-title">Accessibility & Inclusivity</h2>
+  <p id="intro-text">
+    We are committed to ensuring our digital library is accessible to everyone, regardless of age, ability, or background. Below are some of the key features that support an inclusive user experience:
+  </p>
+
+  <ul class="features">
+    <li id="feature1"><strong>Screen-reader Compatibility:</strong> Fully optimized for users relying on screen-reading technology.</li>
+    <li id="feature2"><strong>Alt Text for Images:</strong> Descriptive text is provided for all images to ensure visual content is accessible to all.</li>
+    <li id="feature3"><strong>Adjustable Font Size & Contrast:</strong> Users can change text size and enable high-contrast display for better readability.</li>
+    <li id="feature4"><strong>Keyboard-only Navigation:</strong> The entire website can be navigated without a mouse for improved accessibility.</li>
+    <li id="feature5"><strong>Inclusive & Diverse Content:</strong> We provide culturally respectful, gender-neutral, and multilingual content.</li>
+    <li id="feature6"><strong>Mobile-friendly Design:</strong> The website adapts seamlessly across devices, ensuring consistent access anywhere.</li>
+  </ul>
+
+  <div class="commitment" id="commitment-text">
+    <strong>Our Pledge:</strong> We continuously improve accessibility through user feedback, technology updates, and collaboration with accessibility experts. If you encounter barriers while using our platform, please let us know so we can make it better for everyone.
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Inclusive Library. All rights reserved. | <a href="index.html" id="footer-link">Back to Home</a></p>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    headerTitle: "iSecretary Hub",
+    navHome: "Home",
+    navSearch: "Search",
+    navLearning: "Learning Center",
+    navSupport: "Support",
+    navAccess: "Accessibility",
+    navAbout: "About Us",
+    navContact: "Contact Us",
+    sectionTitle: "Accessibility & Inclusivity",
+    introText: "We are committed to ensuring our digital library is accessible to everyone, regardless of age, ability, or background. Below are some of the key features that support an inclusive user experience:",
+    feature1: "Screen-reader Compatibility: Fully optimized for users relying on screen-reading technology.",
+    feature2: "Alt Text for Images: Descriptive text is provided for all images to ensure visual content is accessible to all.",
+    feature3: "Adjustable Font Size & Contrast: Users can change text size and enable high-contrast display for better readability.",
+    feature4: "Keyboard-only Navigation: The entire website can be navigated without a mouse for improved accessibility.",
+    feature5: "Inclusive & Diverse Content: We provide culturally respectful, gender-neutral, and multilingual content.",
+    feature6: "Mobile-friendly Design: The website adapts seamlessly across devices, ensuring consistent access anywhere.",
+    commitment: "Our Pledge: We continuously improve accessibility through user feedback, technology updates, and collaboration with accessibility experts. If you encounter barriers while using our platform, please let us know so we can make it better for everyone.",
+    footerLink: "Back to Home"
+  },
+  ms: {
+    headerTitle: "iSecretary Hub",
+    navHome: "Laman Utama",
+    navSearch: "Carian",
+    navLearning: "Pusat Pembelajaran",
+    navSupport: "Sokongan",
+    navAccess: "Kebolehcapaian",
+    navAbout: "Tentang Kami",
+    navContact: "Hubungi Kami",
+    sectionTitle: "Kebolehcapaian & Inklusiviti",
+    introText: "Kami komited memastikan perpustakaan digital kami boleh diakses oleh semua, tanpa mengira umur, keupayaan, atau latar belakang. Berikut adalah ciri utama yang menyokong pengalaman pengguna inklusif:",
+    feature1: "Keserasian Pembaca Skrin: Dioptimum sepenuhnya untuk pengguna yang bergantung pada teknologi pembaca skrin.",
+    feature2: "Teks Alt untuk Imej: Teks penerangan disediakan untuk semua imej bagi memastikan kandungan visual boleh diakses semua.",
+    feature3: "Pelarasan Saiz & Kontras Fon: Pengguna boleh mengubah saiz teks dan mengaktifkan paparan kontras tinggi untuk kebolehbacaan lebih baik.",
+    feature4: "Navigasi Hanya dengan Papan Kekunci: Seluruh laman web boleh dinavigasi tanpa tetikus untuk kebolehcapaian yang dipertingkatkan.",
+    feature5: "Kandungan Inklusif & Pelbagai: Kami menyediakan kandungan yang menghormati budaya, neutral jantina, dan berbilang bahasa.",
+    feature6: "Reka Bentuk Mesra Mudah Alih: Laman web menyesuaikan diri dengan lancar merentasi peranti, memastikan akses konsisten di mana-mana sahaja.",
+    commitment: "Ikrar Kami: Kami sentiasa menambah baik kebolehcapaian melalui maklum balas pengguna, kemas kini teknologi, dan kerjasama dengan pakar kebolehcapaian. Sekiranya anda menghadapi halangan, sila maklumkan kepada kami untuk penambahbaikan.",
+    footerLink: "Kembali ke Laman Utama"
+  }
+};
+
+document.getElementById('languageSelect').addEventListener('change', function() {
+  const lang = this.value;
+  const t = translations[lang];
+
+  document.getElementById('header-title').innerText = t.headerTitle;
+  document.getElementById('nav-home').innerText = t.navHome;
+  document.getElementById('nav-search').innerText = t.navSearch;
+  document.getElementById('nav-learning').innerText = t.navLearning;
+  document.getElementById('nav-support').innerText = t.navSupport;
+  document.getElementById('nav-access').innerText = t.navAccess;
+  document.getElementById('nav-about').innerText = t.navAbout;
+  document.getElementById('nav-contact').innerText = t.navContact;
+  document.getElementById('section-title').innerText = t.sectionTitle;
+  document.getElementById('intro-text').innerText = t.introText;
+  document.getElementById('feature1').innerHTML = `<strong>${t.feature1.split(':')[0]}:</strong> ${t.feature1.split(':')[1]}`;
+  document.getElementById('feature2').innerHTML = `<strong>${t.feature2.split(':')[0]}:</strong> ${t.feature2.split(':')[1]}`;
+  document.getElementById('feature3').innerHTML = `<strong>${t.feature3.split(':')[0]}:</strong> ${t.feature3.split(':')[1]}`;
+  document.getElementById('feature4').innerHTML = `<strong>${t.feature4.split(':')[0]}:</strong> ${t.feature4.split(':')[1]}`;
+  document.getElementById('feature5').innerHTML = `<strong>${t.feature5.split(':')[0]}:</strong> ${t.feature5.split(':')[1]}`;
+  document.getElementById('feature6').innerHTML = `<strong>${t.feature6.split(':')[0]}:</strong> ${t.feature6.split(':')[1]}`;
+  document.getElementById('commitment-text').innerHTML = `<strong>${t.commitment.split(':')[0]}:</strong> ${t.commitment.split(':')[1]}`;
+  document.getElementById('footer-link').innerText = t.footerLink;
+});
+</script>
+
+</body>
+</html>
