@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Center - Inclusive Library</title>
+<style>
+  :root {
+    --primary-color: #a8e6cf;
+    --secondary-color: #e0f7f1;
+    --accent-color: #d0f0e0;
+    --header-bg: #88d8b0;
+    --button-color: #56c596;
+    --button-hover: #3fa37a;
+    --text-color: #2e3d35;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+
+  header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .language-select {
+    background-color: white;
+    color: var(--text-color);
+    padding: 0.4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: var(--primary-color);
+    padding: 1em;
+  }
+
+  nav a {
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--button-hover);
+  }
+
+  .section {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: var(--button-color);
+    text-align: center;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+
+  .card {
+    background-color: var(--accent-color);
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+
+  .tips {
+    margin-top: 2em;
+    background-color: var(--accent-color);
+    padding: 1em;
+    border-radius: 8px;
+  }
+
+  footer {
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="header-title">Your Learning Center</h1>
+  <select class="language-select" id="languageSelect">
+    <option value="en">English</option>
+    <option value="ms">Bahasa Melayu</option>
+  </select>
+</header>
+
+<nav>
+  <a href="#" id="nav-home">Home</a>
+  <a href="#" id="nav-search">Search</a>
+  <a href="#" id="nav-learning">Learning Center</a>
+  <a href="#" id="nav-support">Support</a>
+  <a href="#" id="nav-accessibility">Accessibility</a>
+  <a href="#" id="nav-about">About Us</a>
+  <a href="#" id="nav-contact">Contact Us</a>
+</nav>
+
+<div class="section">
+  <h2 id="section-title">Learning Center</h2>
+  <p id="intro-text" style="text-align:center; max-width:700px; margin: 0 auto 2em;">
+    Discover learning resources tailored for all styles to support your academic success, whether you're a visual, auditory, or kinesthetic learner.
+  </p>
+
+  <div class="info-grid">
+    <div class="card">
+      <h3 id="visual-title">Visual Learners</h3>
+      <ul>
+        <li id="visual-1">Infographics & Diagrams</li>
+        <li id="visual-2">Educational Videos</li>
+        <li id="visual-3">Interactive Slides</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 id="audio-title">Auditory Learners</h3>
+      <ul>
+        <li id="audio-1">Podcasts & Audio Guides</li>
+        <li id="audio-2">Read-Aloud Tools</li>
+        <li id="audio-3">Discussion Forums</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 id="kin-title">Kinesthetic Learners</h3>
+      <ul>
+        <li id="kin-1">Interactive Quizzes</li>
+        <li id="kin-2">Hands-on Activities</li>
+        <li id="kin-3">Drag-and-Drop Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tips">
+    <h4 id="tips-title">Additional Learning Support:</h4>
+    <ul>
+      <li id="tip-1">Access to academic databases</li>
+      <li id="tip-2">Referencing tools & plagiarism checks</li>
+      <li id="tip-3">AI-powered learning assistant</li>
+      <li id="tip-4">Workshops & training sessions</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Inclusive Library</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      header: "Your Learning Center",
+      navHome: "Home",
+      navSearch: "Search",
+      navLearning: "Learning Center",
+      navSupport: "Support",
+      navAccess: "Accessibility",
+      navAbout: "About Us",
+      navContact: "Contact Us",
+      sectionTitle: "Learning Center",
+      intro: "Discover learning resources tailored for all styles to support your academic success, whether you're a visual, auditory, or kinesthetic learner.",
+      visualTitle: "Visual Learners",
+      visual1: "Infographics & Diagrams",
+      visual2: "Educational Videos",
+      visual3: "Interactive Slides",
+      audioTitle: "Auditory Learners",
+      audio1: "Podcasts & Audio Guides",
+      audio2: "Read-Aloud Tools",
+      audio3: "Discussion Forums",
+      kinTitle: "Kinesthetic Learners",
+      kin1: "Interactive Quizzes",
+      kin2: "Hands-on Activities",
+      kin3: "Drag-and-Drop Tools",
+      tipsTitle: "Additional Learning Support:",
+      tip1: "Access to academic databases",
+      tip2: "Referencing tools & plagiarism checks",
+      tip3: "AI-powered learning assistant",
+      tip4: "Workshops & training sessions"
+    },
+    ms: {
+      header: "Pusat Pembelajaran Anda",
+      navHome: "Laman Utama",
+      navSearch: "Carian",
+      navLearning: "Pusat Pembelajaran",
+      navSupport: "Sokongan",
+      navAccess: "Kebolehcapaian",
+      navAbout: "Tentang Kami",
+      navContact: "Hubungi Kami",
+      sectionTitle: "Pusat Pembelajaran",
+      intro: "Temui sumber pembelajaran yang disesuaikan untuk semua gaya bagi menyokong kejayaan akademik anda, sama ada anda pelajar visual, auditori, atau kinestetik.",
+      visualTitle: "Pelajar Visual",
+      visual1: "Infografik & Diagram",
+      visual2: "Video Pendidikan",
+      visual3: "Slaid Interaktif",
+      audioTitle: "Pelajar Auditori",
+      audio1: "Podcast & Panduan Audio",
+      audio2: "Alat Bacaan Automatik",
+      audio3: "Forum Perbincangan",
+      kinTitle: "Pelajar Kinestetik",
+      kin1: "Kuiz Interaktif",
+      kin2: "Aktiviti Praktikal",
+      kin3: "Alat Seret & Lepas",
+      tipsTitle: "Sokongan Pembelajaran Tambahan:",
+      tip1: "Akses kepada pangkalan data akademik",
+      tip2: "Alat rujukan & semakan plagiarisme",
+      tip3: "Pembantu pembelajaran berkuasa AI",
+      tip4: "Bengkel & sesi latihan"
+    }
+  };
+
+  document.getElementById('languageSelect').addEventListener('change', function() {
+    const lang = this.value;
+    const t = translations[lang];
+
+    document.getElementById('header-title').innerText = t.header;
+    document.getElementById('nav-home').innerText = t.navHome;
+    document.getElementById('nav-search').innerText = t.navSearch;
+    document.getElementById('nav-learning').innerText = t.navLearning;
+    document.getElementById('nav-support').innerText = t.navSupport;
+    document.getElementById('nav-accessibility').innerText = t.navAccess;
+    document.getElementById('nav-about').innerText = t.navAbout;
+    document.getElementById('nav-contact').innerText = t.navContact;
+    document.getElementById('section-title').innerText = t.sectionTitle;
+    document.getElementById('intro-text').innerText = t.intro;
+    document.getElementById('visual-title').innerText = t.visualTitle;
+    document.getElementById('visual-1').innerText = t.visual1;
+    document.getElementById('visual-2').innerText = t.visual2;
+    document.getElementById('visual-3').innerText = t.visual3;
+    document.getElementById('audio-title').innerText = t.audioTitle;
+    document.getElementById('audio-1').innerText = t.audio1;
+    document.getElementById('audio-2').innerText = t.audio2;
+    document.getElementById('audio-3').innerText = t.audio3;
+    document.getElementById('kin-title').innerText = t.kinTitle;
+    document.getElementById('kin-1').innerText = t.kin1;
+    document.getElementById('kin-2').innerText = t.kin2;
+    document.getElementById('kin-3').innerText = t.kin3;
+    document.getElementById('tips-title').innerText = t.tipsTitle;
+    document.getElementById('tip-1').innerText = t.tip1;
+    document.getElementById('tip-2').innerText = t.tip2;
+    document.getElementById('tip-3').innerText = t.tip3;
+    document.getElementById('tip-4').innerText = t.tip4;
+  });
+</script>
+
+</body>
+</html>
