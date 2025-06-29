@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Inclusive Library</title>
+<style>
+:root {
+  --primary-color: #a8e6cf;
+  --secondary-color: #e0f7f1;
+  --accent-color: #d0f0e0;
+  --header-bg: #56c596;
+  --button-color: #3fa37a;
+  --text-color: #2e3d35;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.language-select {
+  background-color: white;
+  color: var(--text-color);
+  padding: 0.4em;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav {
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.section {
+  background-color: white;
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 2em;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+h2 {
+  color: var(--header-bg);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+
+.contact-info {
+  background-color: var(--accent-color);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 0.8em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  font-size: 1em;
+}
+
+button {
+  align-self: start;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--header-bg);
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--header-bg);
+  color: white;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #e0ffef;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="header-title">Contact Us Here!</h1>
+  <select class="language-select" id="languageSelect">
+    <option value="en">English</option>
+    <option value="ms">Bahasa Melayu</option>
+  </select>
+</header>
+
+<nav>
+  <a href="index.html" id="nav-home">Home</a>
+  <a href="search.html" id="nav-search">Search</a>
+  <a href="research-help.html" id="nav-research">Research Help</a>
+  <a href="learning-center.html" id="nav-learning">Learning Center</a>
+  <a href="support.html" id="nav-support">Support</a>
+  <a href="accessibility.html" id="nav-access">Accessibility</a>
+  <a href="about-us.html" id="nav-about">About Us</a>
+  <a href="contact-us.html" id="nav-contact">Contact Us</a>
+</nav>
+
+<div class="section">
+  <h2 id="contact-heading">Contact Inclusive Library</h2>
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <h3 id="library-details">Library Contact Details</h3>
+      <p><strong id="address-label">Address:</strong> Jalan Ilmu, 50300 Kuala Lumpur, Malaysia</p>
+      <p><strong id="email-label">Email:</strong> library@inclusivelibrary.com</p>
+      <p><strong id="phone-label">Phone:</strong> +603-1234 5678</p>
+      <p><strong id="hours-label">Opening Hours:</strong><br>
+        Monday - Friday: 9:00 AM - 6:00 PM<br>
+        Saturday: 10:00 AM - 4:00 PM<br>
+        Sunday & Public Holidays: Closed
+      </p>
+    </div>
+
+    <div>
+      <h3 id="message-title">Send Us a Message</h3>
+      <form id="contactForm">
+        <label for="name" id="label-name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email" id="label-email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message" id="label-message">Your Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+
+        <button type="submit" id="submit-button">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Inclusive Library. All rights reserved. | <a href="index.html" id="footer-link">Back to Home</a></p>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    headerTitle: "Contact Us Here!",
+    navHome: "Home",
+    navSearch: "Search",
+    navResearch: "Research Help",
+    navLearning: "Learning Center",
+    navSupport: "Support",
+    navAccess: "Accessibility",
+    navAbout: "About Us",
+    navContact: "Contact Us",
+    contactHeading: "Contact Inclusive Library",
+    libraryDetails: "Library Contact Details",
+    addressLabel: "Address:",
+    emailLabel: "Email:",
+    phoneLabel: "Phone:",
+    hoursLabel: "Opening Hours:",
+    messageTitle: "Send Us a Message",
+    labelName: "Your Name",
+    labelEmail: "Your Email",
+    labelMessage: "Your Message",
+    submitButton: "Send Message",
+    footerLink: "Back to Home"
+  },
+  ms: {
+    headerTitle: "Hubungi Kami Di Sini!",
+    navHome: "Laman Utama",
+    navSearch: "Carian",
+    navResearch: "Bantuan Penyelidikan",
+    navLearning: "Pusat Pembelajaran",
+    navSupport: "Sokongan",
+    navAccess: "Kebolehcapaian",
+    navAbout: "Tentang Kami",
+    navContact: "Hubungi Kami",
+    contactHeading: "Hubungi Inclusive Library",
+    libraryDetails: "Maklumat Perhubungan Perpustakaan",
+    addressLabel: "Alamat:",
+    emailLabel: "E-mel:",
+    phoneLabel: "Telefon:",
+    hoursLabel: "Waktu Operasi:",
+    messageTitle: "Hantar Mesej Kepada Kami",
+    labelName: "Nama Anda",
+    labelEmail: "E-mel Anda",
+    labelMessage: "Mesej Anda",
+    submitButton: "Hantar Mesej",
+    footerLink: "Kembali ke Laman Utama"
+  }
+};
+
+document.getElementById('languageSelect').addEventListener('change', function() {
+  const lang = this.value;
+  const t = translations[lang];
+
+  document.getElementById('header-title').innerText = t.headerTitle;
+  document.getElementById('nav-home').innerText = t.navHome;
+  document.getElementById('nav-search').innerText = t.navSearch;
+  document.getElementById('nav-research').innerText = t.navResearch;
+  document.getElementById('nav-learning').innerText = t.navLearning;
+  document.getElementById('nav-support').innerText = t.navSupport;
+  document.getElementById('nav-access').innerText = t.navAccess;
+  document.getElementById('nav-about').innerText = t.navAbout;
+  document.getElementById('nav-contact').innerText = t.navContact;
+  document.getElementById('contact-heading').innerText = t.contactHeading;
+  document.getElementById('library-details').innerText = t.libraryDetails;
+  document.getElementById('address-label').innerText = t.addressLabel;
+  document.getElementById('email-label').innerText = t.emailLabel;
+  document.getElementById('phone-label').innerText = t.phoneLabel;
+  document.getElementById('hours-label').innerText = t.hoursLabel;
+  document.getElementById('message-title').innerText = t.messageTitle;
+  document.getElementById('label-name').innerText = t.labelName;
+  document.getElementById('label-email').innerText = t.labelEmail;
+  document.getElementById('label-message').innerText = t.labelMessage;
+  document.getElementById('submit-button').innerText = t.submitButton;
+  document.getElementById('footer-link').innerText = t.footerLink;
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for contacting Inclusive Library. We will respond to your message shortly!');
+  this.reset();
+});
+</script>
+
+</body>
+</html>
+
