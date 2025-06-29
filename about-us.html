@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Inclusive Library</title>
+  <style>
+    :root {
+      --primary-color: #a8e6cf;
+      --secondary-color: #e0f7f1;
+      --accent-color: #d0f0e0;
+      --header-bg: #88d8b0;
+      --text-color: #2e3d35;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .language-select {
+      background-color: white;
+      color: var(--text-color);
+      padding: 0.4em;
+      border-radius: 5px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      padding: 2em;
+      max-width: 1000px;
+      margin: 2em auto;
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .about-text {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    h2, h3 {
+      color: #56c596;
+    }
+
+    ul {
+      padding-left: 1.2em;
+      line-height: 1.8;
+    }
+
+    footer {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 1.5em;
+    }
+
+    footer a {
+      color: #e0ffef;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="header-title">Know Us!</h1>
+  <select class="language-select" id="languageSelect">
+    <option value="en">English</option>
+    <option value="ms">Bahasa Melayu</option>
+  </select>
+</header>
+
+<nav>
+  <a href="index.html" id="nav-home">Home</a>
+  <a href="search.html" id="nav-search">Search</a>
+  <a href="learning-center.html" id="nav-learning">Learning Center</a>
+  <a href="support.html" id="nav-support">Support</a>
+  <a href="accessibility.html" id="nav-access">Accessibility</a>
+  <a href="about-us.html" id="nav-about">About Us</a>
+  <a href="contact-us.html" id="nav-contact">Contact Us</a>
+</nav>
+
+<!-- About Inclusive Library -->
+<div class="section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="https://i.imgur.com/DEBwzZN.jpeg" alt="Photo of Creator">
+    </div>
+    <div class="about-text">
+      <h2 id="about-title">About Inclusive Library</h2>
+      <p id="about-desc"><strong>Inclusive Library</strong> is dedicated to providing equitable access to knowledge and learning for all individuals — regardless of age, background, or ability.</p>
+
+      <h3 id="mission-title">Our Mission</h3>
+      <p id="mission-desc">To empower communities by delivering inclusive, user-friendly, and technology-driven library services that support lifelong learning.</p>
+
+      <h3 id="vision-title">Our Vision</h3>
+      <p id="vision-desc">A digital library platform that bridges generational, cultural, educational, and technological divides through innovation and empathy.</p>
+
+      <h3 id="unique-title">What Makes Us Unique</h3>
+      <ul id="unique-list">
+        <li>Multilingual support (English & Malay)</li>
+        <li>Responsive and accessible design</li>
+        <li>AI-powered search and chat assistant</li>
+        <li>Resources tailored to all learning preferences</li>
+        <li>Support for users with different digital literacy levels</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- About SYARIFAH ALYAA -->
+<div class="section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="https://i.imgur.com/5OBt1cG.jpeg" alt="SYARIFAH ALYAA BINTI SYDE AB RAHAMAD">
+    </div>
+    <div class="about-text">
+      <h2 id="profile-title">Meet SYARIFAH ALYAA</h2>
+      <p id="profile-role"><strong>Senior Librarian, Syed Rahman’s Library</strong></p>
+      <p id="profile-desc">
+        A passionate advocate for student success, I specialize in career development for the secretarial and administrative fields. I guide learners in resume writing, interview skills, and workplace professionalism while leading career workshops and technology training at Syed Rahman’s Library.
+      </p>
+
+      <h3 id="profile-skills-title">Skills & Expertise</h3>
+      <ul id="profile-skills">
+        <li>Career coaching & resume support</li>
+        <li>Workshop & event planning</li>
+        <li>Library management & digital cataloguing</li>
+        <li>Microsoft Office & Google Workspace</li>
+        <li>Public speaking & presentation</li>
+      </ul>
+
+      <h3 id="profile-exp-title">Experience</h3>
+      <ul id="profile-exp">
+        <li>Senior Librarian, Syed Rahman’s Library (2015–Present)</li>
+        <li>Conducted 50+ workplace readiness workshops</li>
+        <li>Guided 200+ students in resume and job profile building</li>
+      </ul>
+
+      <h3 id="profile-edu-title">Education</h3>
+      <ul id="profile-edu">
+        <li>Bachelor’s Degree in Library and Information Science</li>
+        <li>Certified Career Development Facilitator (CCDF)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Inclusive Library. All rights reserved. | <a href="index.html" id="footer-link">Back to Home</a></p>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    headerTitle: "Know Us!",
+    navHome: "Home",
+    navSearch: "Search",
+    navLearning: "Learning Center",
+    navSupport: "Support",
+    navAccess: "Accessibility",
+    navAbout: "About Us",
+    navContact: "Contact Us",
+    aboutTitle: "About Inclusive Library",
+    aboutDesc: "Inclusive Library is dedicated to providing equitable access to knowledge and learning for all individuals — regardless of age, background, or ability.",
+    missionTitle: "Our Mission",
+    missionDesc: "To empower communities by delivering inclusive, user-friendly, and technology-driven library services that support lifelong learning.",
+    visionTitle: "Our Vision",
+    visionDesc: "A digital library platform that bridges generational, cultural, educational, and technological divides through innovation and empathy.",
+    uniqueTitle: "What Makes Us Unique",
+    uniqueList: [
+      "Multilingual support (English & Malay)",
+      "Responsive and accessible design",
+      "AI-powered search and chat assistant",
+      "Resources tailored to all learning preferences",
+      "Support for users with different digital literacy levels"
+    ],
+    profileTitle: "Meet SYARIFAH ALYAA",
+    profileRole: "Senior Librarian, Syed Rahman’s Library",
+    profileDesc: "A passionate advocate for student success, I specialize in career development for the secretarial and administrative fields. I guide learners in resume writing, interview skills, and workplace professionalism while leading career workshops and technology training at Syed Rahman’s Library.",
+    profileSkillsTitle: "Skills & Expertise",
+    profileSkills: [
+      "Career coaching & resume support",
+      "Workshop & event planning",
+      "Library management & digital cataloguing",
+      "Microsoft Office & Google Workspace",
+      "Public speaking & presentation"
+    ],
+    profileExpTitle: "Experience",
+    profileExp: [
+      "Senior Librarian, Syed Rahman’s Library (2015–Present)",
+      "Conducted 50+ workplace readiness workshops",
+      "Guided 200+ students in resume and job profile building"
+    ],
+    profileEduTitle: "Education",
+    profileEdu: [
+      "Bachelor’s Degree in Library and Information Science",
+      "Certified Career Development Facilitator (CCDF)"
+    ],
+    footerLink: "Back to Home"
+  },
+  ms: {
+    headerTitle: "Kenali Kami!",
+    navHome: "Laman Utama",
+    navSearch: "Carian",
+    navLearning: "Pusat Pembelajaran",
+    navSupport: "Sokongan",
+    navAccess: "Kebolehcapaian",
+    navAbout: "Tentang Kami",
+    navContact: "Hubungi Kami",
+    aboutTitle: "Tentang Inclusive Library",
+    aboutDesc: "Inclusive Library komited menyediakan akses pengetahuan dan pembelajaran yang saksama untuk semua individu — tanpa mengira umur, latar belakang atau keupayaan.",
+    missionTitle: "Misi Kami",
+    missionDesc: "Memperkasa komuniti melalui perkhidmatan perpustakaan yang inklusif, mesra pengguna, dan berasaskan teknologi untuk menyokong pembelajaran sepanjang hayat.",
+    visionTitle: "Visi Kami",
+    visionDesc: "Platform perpustakaan digital yang merapatkan jurang generasi, budaya, pendidikan dan teknologi melalui inovasi dan empati.",
+    uniqueTitle: "Apa Yang Membuat Kami Unik",
+    uniqueList: [
+      "Sokongan berbilang bahasa (English & Bahasa Melayu)",
+      "Reka bentuk responsif dan mesra kebolehcapaian",
+      "Carian dan pembantu sembang berkuasa AI",
+      "Sumber disesuaikan mengikut gaya pembelajaran",
+      "Sokongan untuk pengguna dengan tahap celik digital berbeza"
+    ],
+    profileTitle: "Kenali SYARIFAH ALYAA",
+    profileRole: "Pustakawan Kanan, Perpustakaan Syed Rahman",
+    profileDesc: "Seorang yang berdedikasi dalam pembangunan kerjaya pelajar dalam bidang kesetiausahaan dan pentadbiran. Saya membimbing pelajar dalam penulisan resume, kemahiran temuduga, serta adab di tempat kerja melalui bengkel dan latihan teknologi.",
+    profileSkillsTitle: "Kemahiran & Kepakaran",
+    profileSkills: [
+      "Bimbingan kerjaya & sokongan resume",
+      "Perancangan bengkel & acara",
+      "Pengurusan perpustakaan & katalog digital",
+      "Microsoft Office & Google Workspace",
+      "Kemahiran komunikasi & persembahan"
+    ],
+    profileExpTitle: "Pengalaman",
+    profileExp: [
+      "Pustakawan Kanan, Perpustakaan Syed Rahman (2015–kini)",
+      "Menjalankan lebih 50 bengkel persediaan kerjaya",
+      "Membantu 200+ pelajar dalam membina resume"
+    ],
+    profileEduTitle: "Pendidikan",
+    profileEdu: [
+      "Ijazah Sarjana Muda Sains Perpustakaan & Maklumat",
+      "Pensijilan Fasilitator Pembangunan Kerjaya (CCDF)"
+    ],
+    footerLink: "Kembali ke Laman Utama"
+  }
+};
+
+document.getElementById('languageSelect').addEventListener('change', function () {
+  const lang = this.value;
+  const t = translations[lang];
+
+  document.getElementById('header-title').innerText = t.headerTitle;
+  document.getElementById('nav-home').innerText = t.navHome;
+  document.getElementById('nav-search').innerText = t.navSearch;
+  document.getElementById('nav-learning').innerText = t.navLearning;
+  document.getElementById('nav-support').innerText = t.navSupport;
+  document.getElementById('nav-access').innerText = t.navAccess;
+  document.getElementById('nav-about').innerText = t.navAbout;
+  document.getElementById('nav-contact').innerText = t.navContact;
+  document.getElementById('about-title').innerText = t.aboutTitle;
+  document.getElementById('about-desc').innerText = t.aboutDesc;
+  document.getElementById('mission-title').innerText = t.missionTitle;
+  document.getElementById('mission-desc').innerText = t.missionDesc;
+  document.getElementById('vision-title').innerText = t.visionTitle;
+  document.getElementById('vision-desc').innerText = t.visionDesc;
+  document.getElementById('unique-title').innerText = t.uniqueTitle;
+
+  const list = document.getElementById('unique-list');
+  list.innerHTML = "";
+  t.uniqueList.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = item;
+    list.appendChild(li);
+  });
+
+  document.getElementById('profile-title').innerText = t.profileTitle;
+  document.getElementById('profile-role').innerText = t.profileRole;
+  document.getElementById('profile-desc').innerText = t.profileDesc;
+
+  document.getElementById('profile-skills-title').innerText = t.profileSkillsTitle;
+  const skills = document.getElementById('profile-skills');
+  skills.innerHTML = "";
+  t.profileSkills.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = item;
+    skills.appendChild(li);
+  });
+
+  document.getElementById('profile-exp-title').innerText = t.profileExpTitle;
+  const exp = document.getElementById('profile-exp');
+  exp.innerHTML = "";
+  t.profileExp.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = item;
+    exp.appendChild(li);
+  });
+
+  document.getElementById('profile-edu-title').innerText = t.profileEduTitle;
+  const edu = document.getElementById('profile-edu');
+  edu.innerHTML = "";
+  t.profileEdu.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = item;
+    edu.appendChild(li);
+  });
+
+  document.getElementById('footer-link').innerText = t.footerLink;
+});
+</script>
+
+</body>
+</html>
